@@ -7,37 +7,60 @@ import Results from "../Results/Results.js";
 function Game({
   playerScore,
   setPlayerScore,
+  setPlayerChoice,
+  playerChoice,
   computerScore,
   setComputerScore,
+  setComputerChoice,
+  computerChoice,
 }) {
-  
   function handleClick(label) {
-    const options = ["Rock", "Paper", "Scissors"];
+    const options = ["Lapis", "Papyrus", "Scalpellus"];
     const computerResult = options[Math.floor(Math.random() * 3)];
+    setComputerChoice(computerResult);
+    setPlayerChoice(label);
     if (computerResult === label) {
-      alert(
-        "It's a tie! The computer chose " +
-          computerResult +
-          " and the player chose " +
-          label +
-          "!"
-      );
-    }
+      
+    };
     if (computerResult === options[0] && label === options[2]) {
       setComputerScore(computerScore + 1);
+    } else {
+      if (computerResult === options[0] && label === options[1]) {
+        setPlayerScore(playerScore + 1);
+      }
+    }
+    if (computerResult === options[1] && label === options[0]) {
+      setComputerScore(computerScore + 1);
+    } else {
+      if (computerResult === options[1] && label === options[2]) {
+        setPlayerScore(playerScore + 1);
+      }
+    }
+    if (computerResult === options[2] && label === options[1]) {
+      setComputerScore(computerScore + 1);
+    } else {
+      if (computerResult === options[2] && label === options[0]) {
+        setPlayerScore(playerScore + 1);
+      }
     }
     // tied case and computer rock and scissors
-    // todo: label rock computer scissors, computer paper label scissors
+    // todo done: label rock computer scissors, computer paper label scissors
     console.log(computerResult);
+    console.log(label);
   }
   return (
     <div>
       <Score score={playerScore} label="Player Score" />
       <Score score={computerScore} label="Computer Score" />
-      <Button label="Rock" handleClick={handleClick} />
-      <Button label="Paper" handleClick={handleClick} />
-      <Button label="Scissors" handleClick={handleClick} />
-      <Results playerScore={playerScore} computerScore={computerScore} />
+      <Button label="Lapis" handleClick={handleClick} />
+      <Button label="Papyrus" handleClick={handleClick} />
+      <Button label="Scalpellus" handleClick={handleClick} />
+      <Results
+        playerScore={playerScore}
+        playerChoice={playerChoice}
+        computerScore={computerScore}
+        computerChoice={computerChoice}
+      />
     </div>
   );
 }

@@ -40,6 +40,6 @@ export default App;
 // 2. In reset component, add setPlayerChoice/setComputerChoice to props object and set them to default "" value in onclick handler
 // 3. in Game component, at the top of the handle click component (after math.random) use setPlayerChoice(label) and setComputerChoice(computerResult)
 // 4. Accept setPlayerChoice and setComputerChoice and computerChoice and playerChoice as props in the Game curly brackets in the main game function
-// 5. pass playerChoice and computerChoice into Results component as props and accept them int he Results component as props in the curly brackets of the main Results function
-// 6. in the results component use the playerChoice and computerChoice props to create a variable that sets the correct result test that you want such as `computer is winning, computer chose ${computerCHoice} player choice ${playerChoice}`
+// 5. pass playerChoice and computerChoice into Results component as props and accept them in the Results component as props in the curly brackets of the main Results function
+// 6. in the results component use the playerChoice and computerChoice props to create a variable that sets the correct result test that you want such as `computer is winning, computer chose ${computerChoice} player choice ${playerChoice}`
 // 7. update CSS/header text/images to style how you want
