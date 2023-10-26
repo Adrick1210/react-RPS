@@ -20,14 +20,32 @@ function Game({
     setComputerChoice(computerResult);
     setPlayerChoice(label);
     if (computerResult === label) {
-      console.log(
-        `It's a tie! the player chose ${label} and the computer chose ${computerResult}!`
-      );
+      setComputerScore(computerScore + 0);
+      setPlayerScore(playerScore + 0);
+    }
+    if (computerResult === options[0] && label === options[2]) {
+      setComputerScore(computerScore + 1);
+    }
+    if (computerResult === options[0] && label === options[1]) {
+      setPlayerScore(playerScore + 1);
+    }
+    if (computerResult === options[1] && label === options[0]) {
+      setComputerScore(computerScore + 1);
+    }
+    if (computerResult === options[1] && label === options[2]) {
+      setPlayerScore(playerScore + 1);
+    }
+    if (computerResult === options[2] && label === options[1]) {
+      setComputerScore(computerScore + 1);
+    }
+    if (computerResult === options[2] && label === options[0]) {
+      setPlayerScore(playerScore + 1);
     }
     // tied case and computer rock and scissors
     // todo done: label rock computer scissors, computer paper label scissors
     console.log(computerResult);
     console.log(label);
+    console.log(computerScore);
   }
   return (
     <div>
