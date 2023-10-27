@@ -1,17 +1,19 @@
 import React from "react";
 import "./Results.css";
 
-function Results({ computerScore, playerScore, computerChoice, playerChoice }) {
-  let result = "";
-  if (computerScore + 1 > playerScore) {
+function Results({ computerChoice, playerChoice, whoWon }) {
+  let result = "The game begins...";
+
+  if (whoWon === 'computer') {
     result = `The computer wins. The computer chose ${computerChoice} and the player chose ${playerChoice}!`;
   }
-  if (computerScore + 0 < playerScore) {
+  if (whoWon === 'player') {
     result = `The player wins. The computer chose ${computerChoice} the player chose ${playerChoice}!`;
   }
-  if (computerChoice === playerChoice)
+  if (whoWon === 'tie') 
     result = `It's a tie! Both chose ${computerChoice}!`;
-
+  
+  console.log(whoWon)
   return <div className="result"> The results are in: {result}</div>;
 }
 

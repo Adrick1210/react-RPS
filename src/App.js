@@ -9,7 +9,8 @@ function App() {
   const [playerScore, setPlayerScore] = useState(0);
   const [computerChoice, setComputerChoice] = useState("");
   const [playerChoice, setPlayerChoice] = useState("");
-
+  const [whoWon, setWhoWon] = useState("");
+  
   return (
     <div className="App">
       <Header />
@@ -22,12 +23,16 @@ function App() {
         computerScore={computerScore}
         playerChoice={playerChoice}
         playerScore={playerScore}
+        setWhoWon={setWhoWon}
+        whoWon={whoWon}
       />
       <Reset
         setComputerScore={setComputerScore}
         setComputerChoice={setComputerChoice}
         setPlayerScore={setPlayerScore}
         setPlayerChoice={setPlayerChoice}
+        setWhoWon={setWhoWon}
+        whoWon={whoWon}
       />
     </div>
   );

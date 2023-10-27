@@ -1,0 +1,22 @@
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 45px;
+    margin-top: 75px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    margin-top: 53px;
+    font-size: 28px;
+}
+
