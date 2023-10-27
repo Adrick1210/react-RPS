@@ -4,3 +4,9 @@ body {
     font-family: 'Caesar Dressing', cursive;
     font-style: italic;
   }
+
+.reset {
+  display: flex;
+  justify-content: center;
+  margin-top: 67px;
+}

@@ -53,8 +53,7 @@ function Game({
     }
     // tied case and computer rock and scissors
     // todo done: label rock computer scissors, computer paper label scissors
-    console.log(computerResult);
-    console.log(label);
+    
   }
   return (
     <div className="game">

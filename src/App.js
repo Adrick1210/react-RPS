@@ -12,7 +12,7 @@ function App() {
   const [whoWon, setWhoWon] = useState("");
   
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Game
         setComputerScore={setComputerScore}
@@ -26,6 +26,7 @@ function App() {
         setWhoWon={setWhoWon}
         whoWon={whoWon}
       />
+      <div className="reset">
       <Reset
         setComputerScore={setComputerScore}
         setComputerChoice={setComputerChoice}
@@ -34,6 +35,7 @@ function App() {
         setWhoWon={setWhoWon}
         whoWon={whoWon}
       />
+      </div>
     </div>
   );
 }
