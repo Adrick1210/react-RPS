@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap");
 
 body {
-    font-family: 'Caesar Dressing', cursive;
-    font-style: italic;
-  }
+  background-image: url("https://nazmiyalantiquerugs.com/wp-content/uploads/2021/08/watermark/border-large-blue-background-antique-persian-kerman-area-rug-71053-nazmiyal.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2000px;
+  font-family: "Caesar Dressing", cursive;
+  font-style: italic;
+}
 
 .reset {
   display: flex;
   justify-content: center;
-  margin-top: 67px;
+  margin-top: 65px;
+  margin-bottom: 10px;
 }

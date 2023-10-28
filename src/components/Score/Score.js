@@ -2,7 +2,7 @@ import React from "react";
 import "./Score.css";
 
 function Score({score, label}) {
-  return <div>
+  return <div className="score">
     <p>{label}: {score}</p>
   </div>;
 }

@@ -3,7 +3,7 @@ import "./Game.css";
 import Score from "../Score/Score.js";
 import Button from "../Button/Button.js";
 import Results from "../Results/Results.js";
- 
+
 function Game({
   playerScore,
   setPlayerScore,
@@ -16,7 +16,6 @@ function Game({
   setWhoWon,
   whoWon,
 }) {
-
   function handleClick(label) {
     const options = ["Lapis", "Papyrus", "Scalpellus"];
     const computerResult = options[Math.floor(Math.random() * 3)];
@@ -29,51 +28,50 @@ function Game({
     }
     if (computerResult === options[0] && label === options[2]) {
       setComputerScore((computerScore) => computerScore + 1);
-      setWhoWon('computer');
+      setWhoWon("computer");
     }
     if (computerResult === options[0] && label === options[1]) {
       setPlayerScore((playerScore) => playerScore + 1);
-      setWhoWon('player');
+      setWhoWon("player");
     }
     if (computerResult === options[1] && label === options[0]) {
       setComputerScore((computerScore) => computerScore + 1);
-      setWhoWon('computer');
+      setWhoWon("computer");
     }
     if (computerResult === options[1] && label === options[2]) {
       setPlayerScore((playerScore) => playerScore + 1);
-      setWhoWon('player');
+      setWhoWon("player");
     }
     if (computerResult === options[2] && label === options[1]) {
       setComputerScore((computerScore) => computerScore + 1);
-      setWhoWon('computer');
+      setWhoWon("computer");
     }
     if (computerResult === options[2] && label === options[0]) {
       setPlayerScore((playerScore) => playerScore + 1);
-      setWhoWon('player');
+      setWhoWon("player");
     }
     // tied case and computer rock and scissors
     // todo done: label rock computer scissors, computer paper label scissors
-    
   }
   return (
     <div className="game">
-      <div className="scores">
+      <div id="scores">
         <Score score={playerScore} label="Player Score" />
         <Score score={computerScore} label="Computer Score" />
       </div>
-      <div className="inputs">
+      <div id="inputs">
         <Button label="Lapis" handleClick={handleClick} />
         <Button label="Papyrus" handleClick={handleClick} />
         <Button label="Scalpellus" handleClick={handleClick} />
       </div>
-      <div className="results">
-        <Results
-          playerScore={playerScore}
-          playerChoice={playerChoice}
-          computerScore={computerScore}
-          computerChoice={computerChoice}
-          whoWon={whoWon}
-        />
+      <div id="results">
+      <Results
+        playerScore={playerScore}
+        playerChoice={playerChoice}
+        computerScore={computerScore}
+        computerChoice={computerChoice}
+        whoWon={whoWon}
+      />
       </div>
     </div>
   );
