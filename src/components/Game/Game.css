@@ -1,10 +1,10 @@
 .game {
-  background-image: url("https://www.vhv.rs/file/max/5/59601_scroll-background-png.png");
+  background-image: url("https://www.transparentpng.com/thumb/scroll/ancient-paper-scroll-pictures-24.png");
   background-repeat: no-repeat;
   background-position: center;
   justify-items: center;
-  background-size: 1000px;
-  margin-top: 70px;
+  background-size: 820px;
+  margin-top: 80px;
   height: 650px;
 }
 
@@ -29,6 +29,7 @@
   display: flex;
   position: relative;
   justify-content: center;
-  top: 200px;
-  font-size: 0.9rem;
+  max-width: 100%;
+  top: 300px;
+  font-size: 1.1rem;
 }

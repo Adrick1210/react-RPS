@@ -12,7 +12,7 @@ function Results({ computerChoice, playerChoice, whoWon }) {
   }
   if (whoWon === "tie") result = `It's a tie! Both chose ${computerChoice}...`;
 
-  return <div className="result"> The results are in: {result}</div>;
+  return <div className="result">{result}</div>;
 }
 
 export default Results;
